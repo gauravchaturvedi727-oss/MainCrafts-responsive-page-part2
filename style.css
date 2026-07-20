@@ -82,12 +82,6 @@ nav{
     color:var(--primary);
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:35px;
-}
-
 .nav-links li a{
     font-size:17px;
     font-weight:500;
@@ -98,6 +92,74 @@ nav{
 .menu-btn{
     display:none;
 }
+
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links > li{
+    position: relative;
+}
+
+.nav-links > li > a{
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active{
+    color: var(--primary);
+}
+
+.nav-links > li > a:hover{
+    color: #00bfff;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-menu li{
+    width: 100%;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover{
+    background: #f2f2f2;
+    color: #0077ff;
+}
+
+.dropdown:hover > .dropdown-menu{
+    display: block;
+}
+
 
 .nav-links li a:hover{
     color:var(--primary);
